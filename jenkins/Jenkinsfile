@@ -16,18 +16,14 @@ pipeline{
 
         stage('build'){
             steps{
-                dir('simple-node-js-react-npm-app'){
                     sh "npm install"
-                }
             }
         }
 
         // stage('test'){
         //     steps{
-        //         dir('simple-node-js-react-npm-app'){
         //             sh "chmod "
         //             sh "./jenkins/scripts/test.sh"
-        //         }
         //     }
         // }
     }
