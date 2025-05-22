@@ -14,10 +14,18 @@ pipeline{
             }
         }
 
+        stage('Debug Environment') {
+            steps {
+                sh '''
+                    echo "User: $(whoami)"
+                    echo "HOME: $HOME"
+                    echo "npm cache location: $(npm config get cache)"
+                '''
+            }
+        }
+
         stage('build'){
             steps{
-                echo "User: $(whoami)"
-                echo "HOME: $(HOME)"
                 sh "npm install"
             }
         }
