@@ -17,7 +17,7 @@ pipeline{
         stage('build'){
             steps{
                 echo "User: $(whoami)"
-                echo "HOME: $HOME"
+                echo "HOME: $(HOME)"
                 sh "npm install"
             }
         }
