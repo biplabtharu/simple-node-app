@@ -19,15 +19,15 @@ pipeline{
             }
         }
 
-        stage('Debug Environment') {
-            steps {
-                sh '''
-                    echo "User: $(whoami)"
-                    echo "HOME: $HOME"
-                    echo "npm cache location: $(npm config get cache)"
-                '''
-            }
-        }
+        // stage('Debug Environment') {
+        //     steps {
+        //         sh '''
+        //             echo "User: $(whoami)"
+        //             echo "HOME: $HOME"
+        //             echo "npm cache location: $(npm config get cache)"
+        //         '''
+        //     }
+        // }
 
         stage('build'){
             steps{
