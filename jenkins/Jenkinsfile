@@ -3,13 +3,14 @@ pipeline{
         docker{
             image "node:18"
             args "-p 3004:3000"
+            args "-u node"
         }
     }
 
-    environment{
-       HOME = "/tmp"
-       NPM_CONFIG_CACHE = '/tmp/npm-cache'
-    }
+    // environment{
+    //    HOME = "/tmp"
+    //    NPM_CONFIG_CACHE = '/tmp/npm-cache'
+    // }
 
     stages{
         stage('checkout'){
