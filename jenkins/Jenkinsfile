@@ -1,9 +1,14 @@
 pipeline{
     agent{
         docker{
-            image "node:slim"
+            image "node:18"
             args "-p 3004:3000"
+            args "-u node"
         }
+    }
+
+    environment{
+        HOME = '/home/node'
     }
 
     stages{
